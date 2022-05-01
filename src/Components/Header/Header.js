@@ -23,6 +23,12 @@ const Header = () => {
         </Link>
         <Link
           className="font-medium text-xl mx-5 p-2 rounded-md hover:bg-cyan-300"
+          to="/blogs"
+        >
+          Blogs
+        </Link>
+        <Link
+          className="font-medium text-xl mx-5 p-2 rounded-md hover:bg-cyan-300"
           to="/login"
         >
           Login

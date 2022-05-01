@@ -2,6 +2,8 @@ import React from "react";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import tv from "../../Images/resized/1..jpeg";
 import fridge from "../../Images/resized/2..png";
 import laptop from "../../Images/resized/3..png";
@@ -62,6 +64,10 @@ const Home = () => {
             <img className="w-[100%]" src={ps52} alt="" />
           </SwiperSlide>
         </Swiper>
+      </section>
+      <section>
+        <p className="text-center my-6 text-4xl">Inventory</p>
+        <div></div>
       </section>
     </div>
   );

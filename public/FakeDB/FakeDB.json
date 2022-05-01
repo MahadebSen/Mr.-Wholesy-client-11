@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Mi QLED TV",
+    "img": "https://i.ibb.co/sCFvKpp/1.png",
+    "description": "Take a quantum leap into the future with the power of quantum dot technology. A revolutionary ultra high-definition display equipped with Quantum Dot nanocrystals to emit pure colours and enhance image vibrancy.",
+    "price": "200",
+    "quantity": "25",
+    "supplier": "Appario Retail Private Ltd"
+  },
+  {
+    "name": "Godrej 190 L",
+    "img": "https://i.ibb.co/CVnFrDL/2.png",
+    "description": "Godrej 190 L 4 Star Inverter Direct-Cool Single Door Refrigerator with Jumbo Vegetable Tray (RD 1904 PTDI 43 DI GLASS BLUE, Glass Blue, Base stand with Drawer)",
+    "price": "150",
+    "quantity": "36",
+    "supplier": "DAWNTECH PRIVATE LIMITED"
+  },
+  {
+    "name": "Bajaj 23 L Convection",
+    "img": "https://i.ibb.co/QN93WKk/3.png",
+    "description": "With 46 Indian auto-cook menus, the Bajaj 2310 ETC 23 L Grill Convection Microwave Oven lets you cook a wide range of meals at the push of a button. The oven has a deodoriser that gets rid of foul food smells quickly.",
+    "price": "155",
+    "quantity": "37",
+    "supplier": "RKLLP"
+  },
+  {
+    "name": "Lenovo Legion 5",
+    "img": "https://i.ibb.co/yP69qDd/4.png",
+    "description": "Lenovo Legion 5 AMD Ryzen 7 5800H 15.6 FHD IPS Gaming Laptop (16GB/512GB SSD/Windows 10/MS Office/NVIDIA RTX 3050 4GB/165Hz Refresh Rate/RGB Backlit Keyboard/Phantom Blue/2.4Kg), 82JW0052IN",
+    "price": "560",
+    "quantity": "15",
+    "supplier": "Technology Amplified Inc"
+  },
+  {
+    "name": "HP All-in-One 21.5-Inch(54.6 cm) FHD with Alexa",
+    "img": "https://i.ibb.co/ccpqLxm/5.png",
+    "description": "The HP All-in-One PC blends the power of a desktop with the beauty of a slim, three-sided borderless display for one dependable device designed to grow with you.",
+    "price": "250",
+    "quantity": "30",
+    "supplier": "Appario Retail Private Ltd"
+  },
+  {
+    "name": "Apple Mac Mini",
+    "img": "https://i.ibb.co/64pCqT4/6.png",
+    "description": "The Apple M1 chip takes Apple's most versatile, do-it-all desktop into another dimension. With up to 3x faster CPU performance. Up to 6x faster graphics. And Apple's most advanced Neural Engine for up to 15x faster machine learning.",
+    "price": "680",
+    "quantity": "6",
+    "supplier": "Appario Retail Private Ltd"
+  },
+  {
+    "name": "iPhone 13",
+    "img": "https://i.ibb.co/x58Ykt1/7.png",
+    "description": "A14 Bionic, the uitra-fast chip that powers iPhone 12. An edge-to-edge OLED display. And Night mode on every camera.",
+    "price": "6499",
+    "quantity": "8",
+    "supplier": "RKLLP"
+  },
+  {
+    "name": "iBall Raaga Classic",
+    "img": "https://i.ibb.co/TmqtVKd/8.png",
+    "description": "The premium wood casing provides rich, clear, sound that enhances and brings a completely different audio experience. Be it playing movies that may require strong bass with emphasis on each punch, or listening to the melodious sound of music that calms your soul.",
+    "price": "120",
+    "quantity": "58",
+    "supplier": "Aaptica Retail Corporation"
+  },
+  {
+    "name": "Bosch 7 kg 5 Star Inverter",
+    "img": "https://i.ibb.co/yW2vNSP/9.png",
+    "description": "7 KG Capacity - Ideal For Families BEE 5 Star Rating Hygenic Wash With 99.99% Bacteria Reduction.Manufacturer Warranty, 2 Years on Product, 12 Years on Motor Wash Programs,15 Anti Tangle Function - Keep Clothes Free From Tangles & Damage 1200 RPM Spinning Speed For Quick Drying",
+    "price": "652",
+    "quantity": "26",
+    "supplier": "DAWNTECH ELECTRONICS PRIVATE LIMITED"
+  },
+  {
+    "name": "boAt Rockerz 370",
+    "img": "https://i.ibb.co/FmbqD5q/10.png",
+    "description": "The headset has padded earcups for a comfortable experience. The headphone has been ergonomically and aesthetically designed for a seamless experience.",
+    "price": "99",
+    "quantity": "158",
+    "supplier": "Appario Retail Private Ltd"
+  },
+  {
+    "name": "SONY PlayStation 5",
+    "img": "https://i.ibb.co/LCDZy8V/11.png",
+    "description": "PS5, Wireless Controller, 825GB SSD, Base, HDMI Cable, AC Power Cord, USB Cable, Printed Materials, ASTRO's PLAYROOM (Pre-installed Game. Console May Need to be Updated to the Latest System Software Version. Internet Connection Required.)",
+    "price": "899",
+    "quantity": "27",
+    "supplier": "RKLLP"
+  },
+  {
+    "name": "HP K500F Backlit Membrane",
+    "img": "https://i.ibb.co/x1y7xTt/12.png",
+    "description": "Keyboard stand and slim frame Gaming buttons rated at up to 10 million clicks, With a thick keyboard with responsive keys.",
+    "price": "98",
+    "quantity": "230",
+    "supplier": "Appario Retail Private Ltd"
+  },
+  {
+    "name": "Canon EOS 1500D 24.1 Digital SLR Camera",
+    "img": "https://i.ibb.co/sFTyGHW/13.png",
+    "description": "Sensor: APS-C CMOS Sensor with 24.1 MP (high resolution for large prints and image cropping). Transmission frequency (central frequency):Frequency: 2 412 to 2 462MHz. Standard diopter :-2.5 - +0.5m-1 (dpt)",
+    "price": "899",
+    "quantity": "16",
+    "supplier": "SMART LIGHT Private Ltd"
+  },
+  {
+    "name": "Zinq Technologies Full HD Webcam",
+    "img": "https://i.ibb.co/Lg50Hvk/14.png",
+    "description": "The Zinq Technologies ZQ-1080 webcam makes video calls a lifelike experience each time you use it. Its 1920x1080 pixels Full HD resolution makes every image as clear as a crystal.",
+    "price": "144",
+    "quantity": "25",
+    "supplier": "SMART LIGHT Private Ltd"
+  },
+  {
+    "name": "BESTOR® Professional Condenser Microphone Kit",
+    "img": "https://i.ibb.co/SczzqRt/15.png",
+    "description": "XLR microphone gives you up to 192khz/24bit high sampling rate, excellently restore every note, accurately capture vocal signal, no jams, no delay. To make your recordings more crystal clear.",
+    "price": "179",
+    "quantity": "360",
+    "supplier": "BESTOR® INDIA"
+  },
+  {
+    "name": "Philips Air Desk Light",
+    "img": "https://i.ibb.co/drXnVN4/16.png",
+    "description": "Desk lights fall under the category of task lights. As task light serves the function of localized lighting which provides you with the adequate amount of light needed to perform a given task.",
+    "price": "105",
+    "quantity": "265",
+    "supplier": "Atinak Lighting"
+  },
+  {
+    "name": "LG 24-inch (60.96 cm) Full HD IPS Monitor",
+    "img": "https://i.ibb.co/kMvR8rv/17.png",
+    "description": "23.8-inch display with FHD (1920 X 1080) resolution. 2 HDMI (with H-Frequency: 30~83kHz / V-Frequency: 56~75Hz); D-Sub - 1, Headphone Out: 1",
+    "price": "1564",
+    "quantity": "66",
+    "supplier": "DEAL SMART"
+  },
+  {
+    "name": "Nintendo Switch OLED model",
+    "img": "https://i.ibb.co/pvrKxB6/18.png",
+    "description": "The Nintendo Switch is a video game console developed by Nintendo and released worldwide in most regions on March 3, 2017. The console itself is a tablet that can either be docked for use as a home console or used as a portable device, making it a hybrid console.",
+    "price": "499",
+    "quantity": "74",
+    "supplier": "Mobhylestore"
+  },
+  {
+    "name": "Samsung 1 Ton 4 Star Inverter Split AC",
+    "img": "https://i.ibb.co/LCB4tgZ/19.png",
+    "description": "Split AC with inverter compressor: Variable speed compressor which adjusts power depending on heat load. It is most energy efficient and has lowest-noise operation",
+    "price": "2899",
+    "quantity": "78",
+    "supplier": "DAWNTECH ELECTRONICS PRIVATE LIMITED"
+  },
+  {
+    "name": "PHILIPS Drip Coffee Maker",
+    "img": "https://i.ibb.co/RgYhbd3/20.png",
+    "description": "Coffee Maker comes with Advanced brewing technology with mesh filter. 600 Watt heating Plate, Capacity: 600 ml, Anti drip mechanism",
+    "price": "599",
+    "quantity": "357",
+    "supplier": "RetailEZ Pvt Ltd"
+  }
+]
