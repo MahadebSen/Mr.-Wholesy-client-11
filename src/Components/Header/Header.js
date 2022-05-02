@@ -16,25 +16,25 @@ const Header = () => {
       </Link>
       <div>
         <Link
-          className="font-medium text-xl mx-5 p-2 rounded-md hover:bg-cyan-300"
+          className="font-medium text-xl mx-5 p-2 rounded-md hover:bg-blue-300"
           to="/"
         >
           Home
         </Link>
         <Link
-          className="font-medium text-xl mx-5 p-2 rounded-md hover:bg-cyan-300"
+          className="font-medium text-xl mx-5 p-2 rounded-md hover:bg-blue-300"
           to="/blogs"
         >
           Blogs
         </Link>
         <Link
-          className="font-medium text-xl mx-5 p-2 rounded-md hover:bg-cyan-300"
+          className="font-medium text-xl mx-5 p-2 rounded-md hover:bg-blue-300"
           to="/login"
         >
           Login
         </Link>
         <Link
-          className="font-medium text-xl ml-5 p-2 rounded-md hover:bg-cyan-300"
+          className="font-medium text-xl ml-5 p-2 rounded-md hover:bg-blue-300"
           to="/about"
         >
           About

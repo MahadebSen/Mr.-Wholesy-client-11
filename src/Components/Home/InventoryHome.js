@@ -1,10 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import useProducts from "../CustomHook/useProducts";
 import EachItem from "../EachItem/EachItem";
 
-const Inventory = () => {
+const InventoryHome = () => {
+  const navigate = useNavigate();
   const [products] = useProducts();
   const newArr = products.slice(0, 6);
+
+  const handleShowAll = () => {
+    navigate("/inventory");
+  };
+
   return (
     <div>
       <p className="text-center my-8 text-4xl">Inventory</p>
@@ -14,7 +21,10 @@ const Inventory = () => {
         ))}
       </div>
       <div className="my-5 mx-5">
-        <button className="block mx-auto my-5 border border-2 px-5 py-3 rounded-lg bg-blue-500 text-white font-medium text-lg hover:text-black hover:bg-white hover:border-blue-500">
+        <button
+          onClick={handleShowAll}
+          className="block mx-auto my-5 border border-2 px-5 py-3 rounded-lg bg-blue-500 text-white font-medium text-lg hover:text-black hover:bg-white hover:border-blue-500"
+        >
           Show All...
         </button>
       </div>
@@ -22,4 +32,4 @@ const Inventory = () => {
   );
 };
 
-export default Inventory;
+export default InventoryHome;

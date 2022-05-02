@@ -3,7 +3,7 @@ import React from "react";
 const EachItem = ({ item }) => {
   const { name, img, description, price, quantity, supplier } = item;
   return (
-    <div className="border border-2">
+    <div className="border border-2 rounded-lg">
       <div className="border border-2 m-3 rounded-lg">
         <img className="rounded-lg" src={img} alt="" />
       </div>
