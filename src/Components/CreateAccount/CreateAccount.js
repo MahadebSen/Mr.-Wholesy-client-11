@@ -132,13 +132,13 @@ const CreateAccount = () => {
             <section className="flex justify-center items-center my-5">
               <div
                 onClick={handleGoogleSignIn}
-                className="mx-2 hover:shadow-lg"
+                className="mx-2 rounded-lg hover:shadow-lg"
               >
                 <img className="w-[70px]" src={googleImg} alt="" />
               </div>
               <div
                 onClick={handleGithubSignIn}
-                className="mx-2 hover:shadow-lg"
+                className="mx-2 rounded-lg hover:shadow-lg"
               >
                 <img className="w-[70px]" src={githubImg} alt="" />
               </div>
