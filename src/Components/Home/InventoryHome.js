@@ -17,7 +17,7 @@ const InventoryHome = () => {
       <p className="text-center my-8 text-4xl">Inventory</p>
       <div className="grid grid-cols-3 gap-4 mx-5">
         {newArr.map((item) => (
-          <EachItem item={item}></EachItem>
+          <EachItem key={item.id} item={item}></EachItem>
         ))}
       </div>
       <div className="my-5 mx-5">
