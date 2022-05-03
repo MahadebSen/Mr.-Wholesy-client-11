@@ -6,9 +6,9 @@ import githubImg from "../../Images/Github.png";
 
 const Login = () => {
   return (
-    <div className=" my-8">
+    <div className=" my-10">
       <section className="grid grid-cols-2 mx-5">
-        <img className="" src={login} alt="" />
+        <img className="h-[100%]" src={login} alt="" />
         <div className="flex justify-center items-center">
           <div>
             <p className="text-center font-semibold text-3xl mb-[50px]">
