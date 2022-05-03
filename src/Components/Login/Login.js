@@ -6,7 +6,7 @@ import githubImg from "../../Images/Github.png";
 
 const Login = () => {
   return (
-    <div className=" my-10">
+    <div className="my-[90px]">
       <section className="grid grid-cols-2 mx-5">
         <img className="h-[100%]" src={login} alt="" />
         <div className="flex justify-center items-center">
@@ -16,12 +16,14 @@ const Login = () => {
             </p>
             <form>
               <input
+                name=""
                 className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[39px] pl-4 text-lg"
                 type="text"
                 placeholder="Email"
                 required
               />
               <input
+                name=""
                 className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[39px] pl-4 text-lg"
                 type="password"
                 placeholder="Password"

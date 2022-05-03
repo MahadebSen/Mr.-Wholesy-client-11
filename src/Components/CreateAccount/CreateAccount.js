@@ -1,25 +1,82 @@
 import React from "react";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSendEmailVerification,
+  useSignInWithGithub,
+  useSignInWithGoogle,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
 import signup from "../../Images/signup.jpg";
 import googleImg from "../../Images/Google.png";
 import githubImg from "../../Images/Github.png";
 import auth from "../../firebase.init";
+import { toast } from "react-toastify";
+import loadingGIF from "../../Images/XOsX.gif";
 
 const CreateAccount = () => {
+  const navigate = useNavigate();
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
-  const handleCreateAccount = (event) => {
+  const [updateProfile, updating, profileError] = useUpdateProfile(auth);
+  const [sendEmailVerification, sending, verificationError] =
+    useSendEmailVerification(auth);
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+  const [signInWithGithub, GithubUser, GithubLoading, GithubError] =
+    useSignInWithGithub(auth);
+
+  const handleCreateAccount = async (event) => {
     event.preventDefault();
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
     const confirmPassword = event.target.confirmPassword.value;
 
-    console.log(name, email, password, confirmPassword);
+    if (password === confirmPassword) {
+      await createUserWithEmailAndPassword(email, password);
+      await updateProfile({ displayName: name });
+      await sendEmailVerification();
+      await toast("Account created");
+    } else {
+      toast("Password not matched");
+    }
   };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle();
+  };
+
+  const handleGithubSignIn = () => {
+    signInWithGithub();
+  };
+
+  if (user || googleUser || GithubUser) {
+    console.log(user);
+    navigate("/");
+  }
+
+  if (loading || updating || sending || googleLoading || GithubLoading) {
+    return (
+      <div className="my-[230px]">
+        <img className="mx-auto" src={loadingGIF} alt="" />
+      </div>
+    );
+  }
+
+  let errMsg;
+  if (
+    error ||
+    profileError ||
+    verificationError ||
+    googleError ||
+    GithubError
+  ) {
+    errMsg = <p>Error: {error.message}</p>;
+  }
+
   return (
-    <div className=" my-10">
+    <div className="my-[90px]">
       <section className="grid grid-cols-2 mx-5">
         <img className="h-[100%]" src={signup} alt="" />
         <div className="flex justify-center items-center">
@@ -63,6 +120,7 @@ const CreateAccount = () => {
                   Login
                 </Link>
               </p>
+              <div className="text-red-600">{errMsg}</div>
               <button
                 type="submit"
                 className="block mx-auto my-9 border border-2 px-5 py-2 rounded-lg bg-blue-500 text-white font-medium text-lg hover:text-black hover:bg-white hover:border-blue-500"
@@ -72,10 +130,16 @@ const CreateAccount = () => {
             </form>
             <p className="text-center">Or you may choose,</p>
             <section className="flex justify-center items-center my-5">
-              <div className="mx-2">
+              <div
+                onClick={handleGoogleSignIn}
+                className="mx-2 hover:shadow-lg"
+              >
                 <img className="w-[70px]" src={googleImg} alt="" />
               </div>
-              <div className="mx-2">
+              <div
+                onClick={handleGithubSignIn}
+                className="mx-2 hover:shadow-lg"
+              >
                 <img className="w-[70px]" src={githubImg} alt="" />
               </div>
             </section>

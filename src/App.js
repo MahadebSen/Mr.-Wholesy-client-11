@@ -7,6 +7,8 @@ import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import Inventory from "./Components/Inventory/Inventory";
 import Login from "./Components/Login/Login";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/inventory" element={<Inventory></Inventory>}></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
