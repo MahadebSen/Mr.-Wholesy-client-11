@@ -1,17 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../Images/logo.png";
+import logo from "../../Images/mr. wholesy.png";
 
 const Header = () => {
   return (
     <div className="flex justify-between items-center mx-6 my-2">
       <Link to="/">
         <div className="flex justify-center items-center">
-          <img className="rounded-full w-[78px]" src={logo} alt="" />
-          <div className="text-4xl mx-3">
-            <span>Waer-</span>
-            <span className="font-semibold ">Wolf</span>
-          </div>
+          <img className="rounded-full w-[190px]" src={logo} alt="" />
         </div>
       </Link>
       <div>
