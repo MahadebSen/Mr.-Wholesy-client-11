@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const EachItem = ({ item }) => {
-  const { name, img, description, price, quantity, supplier } = item;
+  const { id, name, img, description, price, quantity, supplier } = item;
+  const navigate = useNavigate();
+
+  const handleUpdate = (id) => {
+    navigate("/inventory/" + id);
+  };
+
   return (
     <div className="border border-2 rounded-lg">
       <div className="border border-2 m-3 rounded-lg">
@@ -17,7 +24,10 @@ const EachItem = ({ item }) => {
         <p className="font-medium">Price: ${price}</p>
         <p className="font-medium">Quantity: {quantity}</p>
         <p>Supplier: {supplier}</p>
-        <button className="block mx-auto my-5 border border-2 px-4 py-2 rounded-lg bg-blue-500 text-white font-medium hover:text-black hover:bg-white hover:border-blue-500">
+        <button
+          onClick={() => handleUpdate(id)}
+          className="block mx-auto my-5 border border-2 px-4 py-2 rounded-lg bg-blue-500 text-white font-medium hover:text-black hover:bg-white hover:border-blue-500"
+        >
           Update
         </button>
       </div>
