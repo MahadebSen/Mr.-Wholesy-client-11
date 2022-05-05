@@ -1,0 +1,77 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter,
+  faFontAwesome,
+  faFacebook,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import React from "react";
+import logo from "../../Images/Mr. Wholesy footer.png";
+
+const Footer = () => {
+  return (
+    <footer className="bg-black px-12 py-6 flex justify-between">
+      <div>
+        <img className="w-[200px] rounded-xl" src={logo} alt="" />
+        <div className="text-white text-sm mt-3">
+          <p>Mr. Wholesy Private Limited,</p>
+          <p>Buildings Alyssa, Begonia &</p>
+          <p>Clove Embassy Tech Village,</p>
+          <p>Outer Ring Road, Devarabeesanahalli Village,</p>
+          <p>Bengaluru, 560103,</p>
+          <p>Karnataka, India</p>
+        </div>
+        <div className="text-white mt-3">
+          <p className=" text-gray-500">Get to know about us</p>
+          <div className="my-2">
+            <FontAwesomeIcon
+              className="mr-1 text-xl hover:text-blue-500"
+              icon={faFacebook}
+            />
+            <FontAwesomeIcon
+              className="mx-1 text-xl hover:text-cyan-500"
+              icon={faTwitter}
+            />
+            <FontAwesomeIcon
+              className="mx-1 text-xl hover:text-red-600"
+              icon={faYoutube}
+            />
+          </div>
+        </div>
+        <p className="text-white">&#169; 2008-2022 Mr. Wholesy</p>
+      </div>
+      <div className="text-white grid grid-cols-3 gap-16">
+        <div>
+          <h1 className="text-gray-500">ABOUT</h1>
+          <p>Contact Us</p>
+          <p>About Us</p>
+          <p>Careers</p>
+          <p>Wholesale</p>
+          <p>Corporate</p>
+          <p>Information</p>
+        </div>
+        <div>
+          <h1 className="text-gray-500">HELP</h1>
+          <p>Payments</p>
+          <p>Shipping</p>
+          <p>Cancellation</p>
+          <p>Returns</p>
+          <p>FAQ</p>
+          <p>Report</p>
+          <p>Infringemwnt</p>
+        </div>
+        <div>
+          <h1 className="text-gray-500">POLICY</h1>
+          <p>Restock Policy</p>
+          <p>Terms of Use</p>
+          <p>Security</p>
+          <p>Privacy</p>
+          <p>Sitemap</p>
+          <p>EPR Compliance</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
