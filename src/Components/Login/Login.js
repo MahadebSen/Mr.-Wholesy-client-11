@@ -10,9 +10,7 @@ import {
   useUpdatePassword,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
-import { toast } from "react-toastify";
 import loadingGIF from "../../Images/XOsX.gif";
-import { async } from "@firebase/util";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -22,8 +20,6 @@ const Login = () => {
     useSignInWithGoogle(auth);
   const [signInWithGithub, GithubUser, GithubLoading, GithubError] =
     useSignInWithGithub(auth);
-  const [updatePassword, updating, updatePasswordError] =
-    useUpdatePassword(auth);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -41,22 +37,11 @@ const Login = () => {
     signInWithGithub();
   };
 
-  const handleForgetPassword = async (event) => {
-    event.preventDefault();
-    const email = event.target.email.value;
-    if (email) {
-      await updatePassword(email);
-      toast("Password reset email have sent");
-    } else {
-      toast("Please, put your password");
-    }
-  };
-
   if (user || googleUser || GithubUser) {
     navigate("/");
   }
 
-  if (loading || googleLoading || GithubLoading || updating) {
+  if (loading || googleLoading || GithubLoading) {
     return (
       <div className="my-[230px]">
         <img className="mx-auto" src={loadingGIF} alt="" />
@@ -65,7 +50,7 @@ const Login = () => {
   }
 
   let errMsg;
-  if (error || googleError || GithubError || updatePasswordError) {
+  if (error || googleError || GithubError) {
     errMsg = <p>{error.message}</p>;
   }
 
@@ -94,11 +79,8 @@ const Login = () => {
                 required
               />
 
-              <button
-                onClick={handleForgetPassword}
-                className="text-sm text-orange-600"
-              >
-                Forget Password ?
+              <button className="text-sm text-orange-600">
+                <Link to="/forgetpassword">Forget Password ?</Link>
               </button>
 
               <p className="text-sm mt-2">

@@ -10,42 +10,42 @@ const AddItem = () => {
             placeholder="Name"
             className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
             type="text"
-            name=""
+            name="name"
             id=""
           />
           <textarea
             placeholder="Description"
             className="block border border-2 border-blue-600 rounded-lg my-4 w-[400px] h-[85px] pl-4 py-3 text-lg"
             type="text"
-            name=""
+            name="description"
             id=""
           />
           <input
             placeholder="Image Link"
             className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
             type="text"
-            name=""
+            name="img"
             id=""
           />
           <input
             placeholder="Price"
             className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
             type="text"
-            name=""
+            name="price"
             id=""
           />
           <input
             placeholder="Quantity"
             className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
             type="text"
-            name=""
+            name="quantity"
             id=""
           />
           <input
             placeholder="Supplier Name"
             className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
             type="text"
-            name=""
+            name="supplier"
             id=""
           />
         </div>

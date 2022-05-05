@@ -13,6 +13,7 @@ import ManageItems from "./Components/ManageItems/ManageItems";
 import AddItem from "./Components/AddItem/AddItem";
 import MyItems from "./Components/MyItems/MyItems";
 import DisplayItem from "./Components/DisplayItem/DisplayItem";
+import ForgetPassword from "./Components/ForgetPassword/ForgetPassword";
 
 function App() {
   return (
@@ -35,6 +36,10 @@ function App() {
         <Route
           path="/manageitems"
           element={<ManageItems></ManageItems>}
+        ></Route>
+        <Route
+          path="/forgetpassword"
+          element={<ForgetPassword></ForgetPassword>}
         ></Route>
         <Route path="/additem" element={<AddItem></AddItem>}></Route>
         <Route path="/myitems" element={<MyItems></MyItems>}></Route>
