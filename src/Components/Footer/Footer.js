@@ -10,7 +10,7 @@ import logo from "../../Images/Mr. Wholesy footer.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-black px-12 py-6 flex justify-between">
+    <footer className="bg-black px-12 py-10 flex justify-between">
       <div>
         <img className="w-[200px] rounded-xl" src={logo} alt="" />
         <div className="text-white text-sm mt-3">
