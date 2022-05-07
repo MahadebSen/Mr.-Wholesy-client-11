@@ -17,7 +17,7 @@ const ManageItems = () => {
     <div>
       {products.map((item) => (
         <ManageEachItem
-          key={products.id}
+          key={products._id}
           item={item}
           handleDelete={handleDelete}
         ></ManageEachItem>

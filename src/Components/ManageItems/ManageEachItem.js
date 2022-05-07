@@ -1,7 +1,7 @@
 import React from "react";
 
 const ManageEachItem = ({ item, handleDelete }) => {
-  const { id, name, img, description, price, quantity, supplier } = item;
+  const { name, img, description, price, quantity, supplier } = item;
   return (
     <section className="">
       <div className="flex items-center border-2 border-indigo-500 m-8 rounded-md">
@@ -18,7 +18,7 @@ const ManageEachItem = ({ item, handleDelete }) => {
           <p>Supplier: {supplier}</p>
         </div>
         <button
-          onClick={() => handleDelete(id)}
+          onClick={() => handleDelete(item._id)}
           className="mx-5 my-5 border border-2 px-4 py-2 rounded-lg bg-red-500 text-white font-medium hover:text-black hover:bg-white hover:border-red-500"
         >
           Delete

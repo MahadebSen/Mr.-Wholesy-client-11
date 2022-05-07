@@ -23,12 +23,12 @@ const Testimonials = () => {
 
   return (
     <div>
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 my-[80px] mx-auto">
-          <h1 class="text-4xl title-font text-gray-900 mb-12 text-center">
+      <section className="text-gray-600 body-font">
+        <div className="container px-5 mt-[80px] mb-[145px] mx-auto">
+          <h1 className="text-4xl title-font text-gray-900 mb-12 text-center">
             Testimonials
           </h1>
-          <div class="flex flex-wrap -m-4">
+          <div className="flex flex-wrap -m-4">
             <Swiper
               slidesPerView={3}
               centeredSlides={true}

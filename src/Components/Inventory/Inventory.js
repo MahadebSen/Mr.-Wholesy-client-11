@@ -6,11 +6,11 @@ const Inventory = () => {
   const [products] = useProducts();
 
   return (
-    <div>
-      <p className="text-center my-8 text-4xl">Inventory</p>
-      <div className="grid grid-cols-3 gap-5 mx-5 mb-8">
+    <div className="mx-10">
+      <p className="text-center mb-10 text-4xl">Inventory</p>
+      <div className="grid grid-cols-3 gap-8 mx-5 mb-8">
         {products.map((item) => (
-          <EachItem key={item.js} item={item}></EachItem>
+          <EachItem key={item._id} item={item}></EachItem>
         ))}
       </div>
     </div>
