@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import login from "../../Images/4957136.jpg";
 import googleImg from "../../Images/Google.png";
 import githubImg from "../../Images/Github.png";
@@ -14,6 +14,7 @@ import loadingGIF from "../../Images/XOsX.gif";
 
 const Login = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -37,8 +38,11 @@ const Login = () => {
     signInWithGithub();
   };
 
+  const from = location.state?.from?.pathname || "/";
+
   if (user || googleUser || GithubUser) {
-    navigate("/");
+    console.log(user);
+    navigate(from, { replace: true });
   }
 
   if (loading || googleLoading || GithubLoading) {

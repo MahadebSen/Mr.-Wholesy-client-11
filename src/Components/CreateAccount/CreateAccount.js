@@ -6,7 +6,7 @@ import {
   useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import signup from "../../Images/signup.jpg";
 import googleImg from "../../Images/Google.png";
 import githubImg from "../../Images/Github.png";
@@ -16,6 +16,7 @@ import loadingGIF from "../../Images/XOsX.gif";
 
 const CreateAccount = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
   const [updateProfile, updating, profileError] = useUpdateProfile(auth);
@@ -37,7 +38,7 @@ const CreateAccount = () => {
       await createUserWithEmailAndPassword(email, password);
       await updateProfile({ displayName: name });
       await sendEmailVerification();
-      await toast("Account created");
+      toast("Account created");
     } else {
       toast("Password not matched");
     }
@@ -51,9 +52,11 @@ const CreateAccount = () => {
     signInWithGithub();
   };
 
+  const from = location.state?.from?.pathname || "/";
+
   if (user || googleUser || GithubUser) {
     console.log(user);
-    navigate("/");
+    navigate(from, { replace: true });
   }
 
   if (loading || updating || sending || googleLoading || GithubLoading) {
