@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const DisplayItem = () => {
   const params = useParams();
   const [displayItem, setDisplayItem] = useState({});
+  const navigate = useNavigate();
   const id = params.id;
 
   useEffect(() => {
@@ -15,6 +16,10 @@ const DisplayItem = () => {
   }, []);
 
   const { name, img, description, price, quantity, supplier } = displayItem;
+
+  const handleManageItems = () => {
+    navigate("/manageitems");
+  };
 
   return (
     <div>
@@ -41,9 +46,28 @@ const DisplayItem = () => {
             <p className="text-lg font-semibold mb-2">
               Supplier Name: <span className="font-normal">{supplier}</span>
             </p>
-            <div></div>
+            <div>
+              <button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-3 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                Delivered
+              </button>
+              <div className="flex my-4">
+                <input
+                  type="text"
+                  className=" bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+                <button className="ml-4 text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">
+                  Add Stock
+                </button>
+              </div>
+            </div>
           </div>
         </div>
+        <button
+          onClick={handleManageItems}
+          className="block mx-auto border border-2 px-5 py-3 rounded-lg bg-blue-500 text-white font-medium text-lg hover:text-black hover:bg-white hover:border-blue-500"
+        >
+          Manage Items
+        </button>
       </section>
     </div>
   );
