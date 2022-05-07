@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../Images/mr. wholesy.png";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
@@ -22,75 +22,115 @@ const Header = () => {
       <div>
         {user ? (
           <div>
-            <Link
-              className="font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-lg underline underline-offset-8 decoration-2 decoration-red-600 mx-[7px] p-2 rounded-md hover:bg-blue-300"
+                  : "font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+              }
               to="/"
             >
               Home
-            </Link>
-            <Link
-              className="font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-lg underline underline-offset-8 decoration-2 decoration-red-600 mx-[7px] p-2 rounded-md hover:bg-blue-300"
+                  : "font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+              }
               to="/blogs"
             >
               Blogs
-            </Link>
-            <Link
-              className="font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-lg underline underline-offset-8 decoration-2 decoration-red-600 mx-[7px] p-2 rounded-md hover:bg-blue-300"
+                  : "font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+              }
               to="/manageitems"
             >
               Manage Items
-            </Link>
-            <Link
-              className="font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-lg underline underline-offset-8 decoration-2 decoration-red-600 mx-[7px] p-2 rounded-md hover:bg-blue-300"
+                  : "font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+              }
               to="/additem"
             >
               Add Item
-            </Link>
-            <Link
-              className="font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-lg underline underline-offset-8 decoration-2 decoration-red-600 mx-[7px] p-2 rounded-md hover:bg-blue-300"
+                  : "font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+              }
               to="/myitems"
             >
               My Items
-            </Link>
+            </NavLink>
             <button
               className="font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
               onClick={handleSignOut}
             >
               Sign Out
             </button>
-            <Link
-              className="font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-lg underline underline-offset-8 decoration-2 decoration-red-600 mx-[7px] p-2 rounded-md hover:bg-blue-300"
+                  : "font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+              }
               to="/about"
             >
               About
-            </Link>
+            </NavLink>
           </div>
         ) : (
           <div>
-            <Link
-              className="font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-lg underline underline-offset-8 decoration-2 decoration-red-600 mx-[7px] p-2 rounded-md hover:bg-blue-300"
+                  : "font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+              }
               to="/"
             >
               Home
-            </Link>
-            <Link
-              className="font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-lg underline underline-offset-8 decoration-2 decoration-red-600 mx-[7px] p-2 rounded-md hover:bg-blue-300"
+                  : "font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+              }
               to="/blogs"
             >
               Blogs
-            </Link>
-            <Link
-              className="font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-lg underline underline-offset-8 decoration-2 decoration-red-600 mx-[7px] p-2 rounded-md hover:bg-blue-300"
+                  : "font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+              }
               to="/login"
             >
               Login
-            </Link>
-            <Link
-              className="font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-lg underline underline-offset-8 decoration-2 decoration-red-600 mx-[7px] p-2 rounded-md hover:bg-blue-300"
+                  : "font-medium text-lg mx-[7px] p-2 rounded-md hover:bg-blue-300"
+              }
               to="/about"
             >
               About
-            </Link>
+            </NavLink>
           </div>
         )}
       </div>
