@@ -47,18 +47,34 @@ const DisplayItem = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // with fetch quantity set
-        // setDisplayItem(data);
-        // without fetch quantity set
-        if (data.acknowledged === true) {
-          setStockQuantity(quantity - 1);
-        }
       });
   };
 
-  const handleAddStock = () => {
-    const quantityInput = quantityRef.current.value;
-    console.log(quantityInput);
+  const handleAddStock = async () => {
+    let quantityInput = quantityRef.current.value;
+
+    const newStock = parseInt(await quantity) + parseInt(quantityInput);
+    quantityRef.current.value = "";
+    const updatedData = {
+      name,
+      img,
+      description,
+      price,
+      quantity: newStock,
+      supplier,
+    };
+
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (
