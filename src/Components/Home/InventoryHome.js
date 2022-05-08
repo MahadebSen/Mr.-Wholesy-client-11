@@ -19,7 +19,7 @@ const InventoryHome = () => {
   return (
     <div className="mt-16 mx-10">
       <p className="text-center my-16 text-4xl">Inventory</p>
-      <div className="grid grid-cols-3 gap-8 mx-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mx-5">
         {newArr.map((item) => (
           <EachItem key={item._id} item={item}></EachItem>
         ))}

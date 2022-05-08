@@ -10,6 +10,7 @@ const MyItems = () => {
   useEffect(() => {
     const getItems = async () => {
       const url = `https://floating-savannah-17695.herokuapp.com/myitems?email=${user.email}`;
+      console.log(url);
       await fetch(url)
         .then((res) => res.json())
         .then((data) => setItems(data));
