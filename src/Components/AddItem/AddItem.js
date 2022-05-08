@@ -25,7 +25,7 @@ const AddItem = () => {
       supplier,
     };
 
-    fetch("http://localhost:5000/addeditems", {
+    fetch("https://floating-savannah-17695.herokuapp.com/addeditems", {
       method: "POST",
       headers: {
         "content-type": "application/json",
