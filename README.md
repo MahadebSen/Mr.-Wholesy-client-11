@@ -1,4 +1,23 @@
-# Getting Started with Create React App
+# Mr. Wholesy
+
+##Description
+This is a ware-house web site. Here you can add new item, delete existing item, and many more thing.
+
+## Live site link:
+
+"https://waer-wolf.firebaseapp.com/"
+
+## Server side code link:
+
+"https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-MahadebSen"
+
+## Key features:
+
+- You can log in or, Create account here.
+- You can add new item.
+- You can delete existing item.
+- You can change quantity of any item.
+- You can add comment.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
