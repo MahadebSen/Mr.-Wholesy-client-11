@@ -7,7 +7,6 @@ import {
   useSignInWithEmailAndPassword,
   useSignInWithGithub,
   useSignInWithGoogle,
-  useUpdatePassword,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import loadingGIF from "../../Images/XOsX.gif";
@@ -19,7 +18,7 @@ const Login = () => {
     useSignInWithEmailAndPassword(auth);
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
-  const [signInWithGithub, GithubUser, GithubLoading, GithubError] =
+  const [signInWithGithub, githubUser, githubLoading, githubError] =
     useSignInWithGithub(auth);
 
   const handleLogin = (event) => {
@@ -40,12 +39,12 @@ const Login = () => {
 
   const from = location.state?.from?.pathname || "/";
 
-  if (user || googleUser || GithubUser) {
-    console.log(user);
+  if (user || googleUser || githubUser) {
+    console.log(user || googleUser || githubUser);
     navigate(from, { replace: true });
   }
 
-  if (loading || googleLoading || GithubLoading) {
+  if (loading || googleLoading || githubLoading) {
     return (
       <div className="my-[230px]">
         <img className="mx-auto" src={loadingGIF} alt="" />
@@ -54,8 +53,14 @@ const Login = () => {
   }
 
   let errMsg;
-  if (error || googleError || GithubError) {
-    errMsg = <p>{error.message}</p>;
+  if (error || googleError || githubError) {
+    if (error) {
+      errMsg = <p>{error.message}</p>;
+    } else if (googleError) {
+      errMsg = <p>{googleError.message}</p>;
+    } else if (githubError) {
+      errMsg = <p>{githubError.message}</p>;
+    }
   }
 
   return (

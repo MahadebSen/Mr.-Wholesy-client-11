@@ -24,7 +24,7 @@ const CreateAccount = () => {
     useSendEmailVerification(auth);
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
-  const [signInWithGithub, GithubUser, GithubLoading, GithubError] =
+  const [signInWithGithub, githubUser, githubLoading, githubError] =
     useSignInWithGithub(auth);
 
   const handleCreateAccount = async (event) => {
@@ -54,12 +54,12 @@ const CreateAccount = () => {
 
   const from = location.state?.from?.pathname || "/";
 
-  if (user || googleUser || GithubUser) {
-    console.log(user);
+  if (user || googleUser || githubUser) {
+    console.log(user || googleUser || githubUser);
     navigate(from, { replace: true });
   }
 
-  if (loading || updating || sending || googleLoading || GithubLoading) {
+  if (loading || updating || sending || googleLoading || githubLoading) {
     return (
       <div className="my-[230px]">
         <img className="mx-auto" src={loadingGIF} alt="" />
@@ -73,9 +73,19 @@ const CreateAccount = () => {
     profileError ||
     verificationError ||
     googleError ||
-    GithubError
+    githubError
   ) {
-    errMsg = <p>Error: {error.message}</p>;
+    if (error) {
+      errMsg = <p>{error.message}</p>;
+    } else if (googleError) {
+      errMsg = <p>{googleError.message}</p>;
+    } else if (githubError) {
+      errMsg = <p>{githubError.message}</p>;
+    } else if (profileError) {
+      errMsg = <p>{profileError.message}</p>;
+    } else if (verificationError) {
+      errMsg = <p>{verificationError.message}</p>;
+    }
   }
 
   return (
