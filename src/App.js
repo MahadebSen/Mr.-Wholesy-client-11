@@ -16,6 +16,7 @@ import DisplayItem from "./Components/DisplayItem/DisplayItem";
 import ForgetPassword from "./Components/ForgetPassword/ForgetPassword";
 import Footer from "./Components/Footer/Footer";
 import RequireAuth from "./Components/RequireAuth/RequireAuth";
+import NotFoundPage from "./Components/404Page/NotFoundPage";
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />

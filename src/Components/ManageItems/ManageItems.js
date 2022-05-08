@@ -10,8 +10,18 @@ const ManageItems = () => {
   const handleDelete = (id) => {
     const confirm = window.confirm("Are you sure to delete ?");
     if (confirm) {
-      const filterItems = products.filter((item) => item.id !== id);
-      setProducts(filterItems);
+      fetch(`http://localhost:5000/products/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount > 0) {
+            setProducts(products.filter((item) => item._id !== id));
+          }
+        });
+
+      // ;
     }
   };
 
