@@ -23,7 +23,7 @@ const Testimonials = () => {
 
   return (
     <div>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font hidden lg:block">
         <div className="container px-5 mt-[80px] mb-[145px] mx-auto">
           <h1 className="text-4xl title-font text-gray-900 mb-12 text-center">
             Testimonials

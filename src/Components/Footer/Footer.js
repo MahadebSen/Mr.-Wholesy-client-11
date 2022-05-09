@@ -10,9 +10,13 @@ import logo from "../../Images/Mr. Wholesy footer.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-black mt-20 px-12 py-10 flex justify-between">
+    <footer className="bg-black mt-20 px-12 py-10 text-center md:text-left md:flex justify-between">
       <div>
-        <img className="w-[200px] rounded-xl" src={logo} alt="" />
+        <img
+          className="w-[200px] rounded-xl mx-auto md:mx-0"
+          src={logo}
+          alt=""
+        />
         <div className="text-white text-sm mt-3">
           <p>Mr. Wholesy Private Limited,</p>
           <p>Buildings Alyssa, Begonia &</p>
@@ -40,9 +44,9 @@ const Footer = () => {
         </div>
         <p className="text-white">&#169; 2008-2022 Mr. Wholesy</p>
       </div>
-      <div className="text-white grid grid-cols-3 gap-16">
-        <div>
-          <h1 className="text-gray-500">ABOUT</h1>
+      <div className="text-white md:grid md:grid-cols-3 gap-16">
+        <div className="my-4 md:my-0 ">
+          <h1 className="text-gray-500 my-1">ABOUT</h1>
           <p>Contact Us</p>
           <p>About Us</p>
           <p>Careers</p>
@@ -50,8 +54,8 @@ const Footer = () => {
           <p>Corporate</p>
           <p>Information</p>
         </div>
-        <div>
-          <h1 className="text-gray-500">HELP</h1>
+        <div className="my-4 md:my-0 ">
+          <h1 className="text-gray-500 my-1">HELP</h1>
           <p>Payments</p>
           <p>Shipping</p>
           <p>Cancellation</p>
@@ -60,8 +64,8 @@ const Footer = () => {
           <p>Report</p>
           <p>Infringemwnt</p>
         </div>
-        <div>
-          <h1 className="text-gray-500">POLICY</h1>
+        <div className="my-4 md:my-0 ">
+          <h1 className="text-gray-500 my-1">POLICY</h1>
           <p>Restock Policy</p>
           <p>Terms of Use</p>
           <p>Security</p>

@@ -65,8 +65,8 @@ const Login = () => {
 
   return (
     <div className="my-[90px]">
-      <section className="grid grid-cols-2 mx-5">
-        <img className="h-[100%]" src={login} alt="" />
+      <section className="lg:grid grid-cols-2 mx-5">
+        <img className="h-[100%] md:w-[100%] mx-auto" src={login} alt="" />
         <div className="flex justify-center items-center">
           <div>
             <p className="text-center font-semibold text-3xl mb-[50px]">
@@ -75,14 +75,14 @@ const Login = () => {
             <form onSubmit={handleLogin}>
               <input
                 name="email"
-                className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[39px] pl-4 text-lg"
+                className="block border border-2 border-blue-600 rounded-full my-4 mx-auto w-[320px] md:w-[400px] h-[39px] pl-4 text-lg"
                 type="text"
                 placeholder="Email"
                 required
               />
               <input
                 name="password"
-                className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[39px] pl-4 text-lg"
+                className="block border border-2 border-blue-600 rounded-full my-4 mx-auto w-[320px] md:w-[400px] h-[39px] pl-4 text-lg"
                 type="password"
                 placeholder="Password"
                 required

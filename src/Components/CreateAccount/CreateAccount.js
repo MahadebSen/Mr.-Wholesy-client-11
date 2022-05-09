@@ -90,8 +90,8 @@ const CreateAccount = () => {
 
   return (
     <div className="my-[90px]">
-      <section className="grid grid-cols-2 mx-5">
-        <img className="h-[100%]" src={signup} alt="" />
+      <section className="lg:grid grid-cols-2 mx-5">
+        <img className="h-[100%] mx-auto" src={signup} alt="" />
         <div className="flex justify-center items-center">
           <div>
             <p className="text-center font-semibold text-3xl mb-[50px]">

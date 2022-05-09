@@ -14,7 +14,7 @@ const Partners = () => {
   return (
     <div className="mt-24 mb-32 mx-10">
       <p className="text-center text-4xl mb-16">Our Partners</p>
-      <div className="lg:flex">
+      <div className=" md:grid grid-cols-4 lg:flex">
         {partners.map((item) => (
           <EachPartner key={item.id} item={item}></EachPartner>
         ))}
