@@ -13,9 +13,9 @@ This is a ware-house web site. Here you can add new item, delete existing item, 
 
 ## Key features:
 
-- You can log in or, Create account here.
-- You can add new item.
-- You can delete existing item.
+- Protected authentication applied on routes.
+- MongoDB CRUD operation applied.
+- APIs are protected by JWT.
 - You can change quantity of any item.
 - You can add comment.
 
