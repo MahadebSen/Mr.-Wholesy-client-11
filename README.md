@@ -1,6 +1,6 @@
 # Mr. Wholesy
 
-##Description
+## Description
 This is a ware-house web site. Here you can add new item, delete existing item, and many more thing.
 
 ## Live site link:
@@ -9,7 +9,7 @@ This is a ware-house web site. Here you can add new item, delete existing item, 
 
 ## Server side code link:
 
-"https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-MahadebSen"
+"https://github.com/MahadebSen/Mr.-Wholesy-server-11"
 
 ## Key features:
 
