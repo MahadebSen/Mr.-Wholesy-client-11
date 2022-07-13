@@ -1,7 +1,4 @@
-# Mr. Wholesy
-
-## Description
-This is a ware-house web site. Here you can add new item, delete existing item, and many more thing.
+# Mr. Wholesy (Warehouse management site)
 
 ## Live site link:
 
@@ -11,12 +8,22 @@ This is a ware-house web site. Here you can add new item, delete existing item, 
 
 "https://github.com/MahadebSen/Mr.-Wholesy-server-11"
 
+## Technology used :
+
+- React.js
+- React-Router
+- Swiper
+- Firebase authentication
+- Express.js
+- MongoDB
+- Tailwind-CSS
+- Font-awesome
+
 ## Key features:
 
-- Protected authentication applied on routes.
-- MongoDB CRUD operation applied.
-- APIs are protected by JWT.
-- You can change quantity of any item.
-- You can add comment.
+- Inventory items’ quantity decrease when users click on "shipped" and quantity increase when "restock" button become clicked.
+- Users can add items and also delete items.
+- Ordered items are only displayed specifically by logged-in users.
+- Users can add comments.
 
 
