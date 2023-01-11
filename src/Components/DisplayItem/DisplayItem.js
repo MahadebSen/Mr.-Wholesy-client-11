@@ -9,7 +9,7 @@ const DisplayItem = () => {
   const id = params.id;
   const quantityRef = useRef("");
 
-  const url = `https://floating-savannah-17695.herokuapp.com/products/${id}`;
+  const url = `https://mr-wholesy-server.vercel.app/products/${id}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())

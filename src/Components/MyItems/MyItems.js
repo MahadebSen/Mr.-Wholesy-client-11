@@ -9,7 +9,7 @@ const MyItems = () => {
 
   useEffect(() => {
     const getItems = async () => {
-      const url = `https://floating-savannah-17695.herokuapp.com/myitems?email=${user.email}`;
+      const url = `https://mr-wholesy-server.vercel.app/myitems?email=${user.email}`;
       console.log(url);
       await fetch(url)
         .then((res) => res.json())
@@ -21,7 +21,7 @@ const MyItems = () => {
   const handleDelete = (id) => {
     const confirm = window.confirm("Are you sure to delete ?");
     if (confirm) {
-      fetch(`https://floating-savannah-17695.herokuapp.com/products/${id}`, {
+      fetch(`https://mr-wholesy-server.vercel.app/products/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

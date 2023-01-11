@@ -10,7 +10,7 @@ const ManageItems = () => {
   const handleDelete = (id) => {
     const confirm = window.confirm("Are you sure to delete ?");
     if (confirm) {
-      fetch(`https://floating-savannah-17695.herokuapp.com/products/${id}`, {
+      fetch(`https://mr-wholesy-server.vercel.app/products/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

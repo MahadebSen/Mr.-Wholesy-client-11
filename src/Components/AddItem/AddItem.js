@@ -25,7 +25,7 @@ const AddItem = () => {
       supplier,
     };
 
-    fetch("https://floating-savannah-17695.herokuapp.com/addeditems", {
+    fetch("https://mr-wholesy-server.vercel.app/addeditems", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -43,7 +43,7 @@ const AddItem = () => {
         <form onSubmit={handleAddItem}>
           <input
             placeholder="Name"
-            className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
+            className="block border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
             type="text"
             name="name"
             id=""
@@ -51,14 +51,14 @@ const AddItem = () => {
           />
           <textarea
             placeholder="Description"
-            className="block border border-2 border-blue-600 rounded-lg my-4 w-[400px] h-[85px] pl-4 py-3 text-lg"
+            className="block border-2 border-blue-600 rounded-lg my-4 w-[400px] h-[85px] pl-4 py-3 text-lg"
             type="text"
             name="description"
             id=""
             required
           />
           <input
-            className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
+            className="block border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
             type="email"
             name="email"
             value={user?.email}
@@ -69,7 +69,7 @@ const AddItem = () => {
           />
           <input
             placeholder="Image Link"
-            className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
+            className="block border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
             type="text"
             name="img"
             id=""
@@ -77,7 +77,7 @@ const AddItem = () => {
           />
           <input
             placeholder="Price"
-            className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
+            className="block border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
             type="text"
             name="price"
             id=""
@@ -85,7 +85,7 @@ const AddItem = () => {
           />
           <input
             placeholder="Quantity"
-            className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
+            className="block border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
             type="text"
             name="quantity"
             id=""
@@ -93,13 +93,13 @@ const AddItem = () => {
           />
           <input
             placeholder="Supplier Name"
-            className="block border border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
+            className="block border-2 border-blue-600 rounded-full my-4 w-[400px] h-[43px] pl-4 text-lg"
             type="text"
             name="supplier"
             id=""
             required
           />
-          <button className="block mx-auto mt-12 border border-2 px-5 py-2 rounded-lg bg-blue-500 text-white font-medium text-lg hover:text-black hover:bg-white hover:border-blue-500">
+          <button className="block mx-auto mt-12 border-2 px-5 py-2 rounded-lg bg-blue-500 text-white font-medium text-lg hover:text-black hover:bg-white hover:border-blue-500">
             Add item
           </button>
         </form>

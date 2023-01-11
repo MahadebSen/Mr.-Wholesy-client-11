@@ -3,7 +3,7 @@ import React from "react";
 const Blogs = () => {
   return (
     <div className="mt-10">
-      <div className="m-5 border border-2 rounded-lg py-3 px-5">
+      <div className="m-5 border-2 rounded-lg py-3 px-5">
         <p className="font-medium text-lg">
           1. When Should you use node.js development? And when should you use
           mongoDB?
@@ -20,7 +20,7 @@ const Blogs = () => {
           prototyping, than mongoDB can be a great choice.
         </p>
       </div>
-      <div className="m-5 border border-2 rounded-lg py-3 px-5">
+      <div className="m-5 border-2 rounded-lg py-3 px-5">
         <p className="font-medium text-lg">2. SQL vs. no-SQL </p>
         <ul className="list-disc mx-3">
           <li>
@@ -45,7 +45,7 @@ const Blogs = () => {
           </li>
         </ul>
       </div>
-      <div className="m-5 border border-2 rounded-lg py-3 px-5">
+      <div className="m-5 border-2 rounded-lg py-3 px-5">
         <p className="font-medium text-lg">
           3. What is the purpose of jwt? And how does it work?
         </p>
@@ -65,7 +65,7 @@ const Blogs = () => {
           token has not been altered.
         </p>
       </div>
-      <div className="m-5 border border-2 rounded-lg py-3 px-5">
+      <div className="m-5 border-2 rounded-lg py-3 px-5">
         <p className="font-medium text-lg">4. JavaScript vs. Node.js</p>
         <ul className="list-disc mx-3">
           <li>
